@@ -26,7 +26,7 @@ body{
   padding: 0.66rem 1rem;
   color: white;
 }
-.container img{
+.toplogo .container img{
   height: 1.5rem;
   padding-left: 0.5rem;
 }
@@ -73,8 +73,14 @@ body{
   background-color: firebrick;
   width: 100%
 }
-.menu .container{
+.menu .container .desktopmenu{
   display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.menu .container .tabletmenu{
+  display: none;
   justify-content: space-between;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -87,16 +93,13 @@ body{
 }
 .productgrid .container{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 3rem;
   padding-bottom: 4rem;
 }
 .productgrid .container img{
   height: 9rem;
-  width: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding: 2rem;
 }
 .pen, .watch, .glasses{
   width: 30%;
@@ -109,6 +112,17 @@ body{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: black;
+}
+/* CSS for Location & Hours Section */
+
+.locationandtime{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.locationandtime .container{
+  display: flex;
+  justify-content: space-between;
 }
 .location, .hours{
   display: flex;
@@ -137,4 +151,15 @@ footer .container{
   display: flex;
   align-items: center;
   text-align: left;
+}
+@media only screen and (max-width: 1024px){
+  .glasses{
+    display: none;
+  }
+  .pen, .watch{
+    width: 47%;
+  }
+  .desktopmenu{
+    display: none;
+  }
 }
