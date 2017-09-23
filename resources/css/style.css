@@ -73,15 +73,15 @@ body{
   background-color: firebrick;
   width: 100%
 }
-.menu .container .desktopmenu{
+.desktopmenu{
   display: flex;
   justify-content: space-between;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.menu .container .tabletmenu{
+.tabletmenu{
   display: none;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -99,6 +99,7 @@ body{
 }
 .productgrid .container img{
   height: 9rem;
+  width: auto;
   padding: 2rem;
 }
 .pen, .watch, .glasses{
@@ -152,7 +153,11 @@ footer .container{
   align-items: center;
   text-align: left;
 }
+/** CSS Styling for Tablet Device Screen Sizes */
 @media only screen and (max-width: 1024px){
+  html{
+    font-size: 16px;
+  }
   .glasses{
     display: none;
   }
@@ -162,4 +167,18 @@ footer .container{
   .desktopmenu{
     display: none;
   }
+  .desktopmenu span{
+    display: none;
+  }
+  .tabletmenu{
+    display: flex;
+    text-align: center;
+  }
+  .tabletmenu span{
+    display: flex;
+  }
+}
+/** CSS Styling for Mobile Screen Sizes */
+@media only screen and (max-width: 1024px){
+  
 }
